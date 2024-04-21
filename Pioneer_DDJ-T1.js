@@ -44,11 +44,12 @@ DDJ.init = function (id, debugging) {
     DDJ.scratchMode = [false, false, false, false];
 
     DDJ.scratchSettings = {
-        "alpha": 1.0 / 8,
-        "beta": 1.0 / 8 / 32,
-        "jogResolution": 720,
+        // "alpha": 1.0 / 8,
+        // "beta": 1.0 / 8 / 32,
+        "alpha": 1,
+        "beta": 0,
+        "jogResolution": 7200 * 20,
         "vinylSpeed": 33 + 1 / 3,
-        "safeScratchTimeout": 20
     };
 
     DDJ.nonPadLeds = {
@@ -134,44 +135,6 @@ DDJ.Deck = function (deckNumbers, midiChannel) {
 }
 
 DDJ.Deck.prototype = new components.Deck();
-// The button that enables/disables scratching
-DDJ.wheelTouch = function (channel, control, value, status, group) {
-    var deckNumber = script.deckFromGroup(group);
-    if ((status & 0xF0) === 0x90) {    // If button down
-        //if (value === 0x7F) {  // Some wheels send 0x90 on press and release, so you need to check the value
-        var alpha = 1.0 / 8;
-        var beta = alpha / 32;
-        engine.scratchEnable(deckNumber, 128, 33 + 1 / 3, alpha, beta);
-    } else {    // If button up
-        engine.scratchDisable(deckNumber);
-    }
-}
-
-// The wheel that actually controls the scratching
-DDJ.wheelTurn = function (channel, control, value, status, group) {
-    // --- Choose only one of the following!
-
-    // A: For a control that centers on 0:
-    var newValue;
-    if (value < 64) {
-        newValue = value;
-    } else {
-        newValue = value - 128;
-    }
-
-    // B: For a control that centers on 0x40 (64):
-    var newValue = value - 64;
-
-    // --- End choice
-
-    // In either case, register the movement
-    var deckNumber = script.deckFromGroup(group);
-    if (engine.isScratching(deckNumber)) {
-        engine.scratchTick(deckNumber, newValue); // Scratch!
-    } else {
-        engine.setValue(group, 'jog', newValue); // Pitch bend
-    }
-}
 
 ///////////////////////////////////////////////////////////////
 //                        ROTARY SELECTOR                    //
@@ -232,105 +195,100 @@ DDJ.rotarySelectorShiftedClick = function (channel, control, value, _status) {
 //                          JOGWHEELS                        //
 ///////////////////////////////////////////////////////////////
 
-DDJ.deckConverter = function (group) {
-    var index;
-
-    if (typeof group === "string") {
-        for (index in DDJ.deckSwitchTable) {
-            if (group === DDJ.deckSwitchTable[index]) {
-                return DDJ.channelGroups[group];
-            }
-        }
-        return null;
-    }
-    return group;
-};
-
-DDJ.nonPadLedControl = function (deck, ledNumber, active) {
-    var nonPadLedsBaseChannel = 0x90,
-        midiChannelOffset = PioneerDDJSB2.deckConverter(deck);
-
-    if (midiChannelOffset !== null) {
-        midi.sendShortMsg(
-            nonPadLedsBaseChannel + midiChannelOffset,
-            ledNumber,
-            active ? 0x7F : 0x00
+// The top of the platter that enables/disables scratching
+DDJ.jogTouch = function (channel, control, value, status, group) {
+    const deckNumber = script.deckFromGroup(group);
+    // if ((status & 0xF0) === 0x90) {    // If button down
+    if (status === 0x7F) {
+        engine.scratchEnable(
+            deckNumber,
+            DDJ.scratchSettings.jogResolution,
+            DDJ.scratchSettings.vinylSpeed,
+            DDJ.scratchSettings.alpha,
+            DDJ.scratchSettings.beta,
+            false
         );
+    } else {
+        engine.scratchDisable(deckNumber);
     }
-};
+}
 
-DDJ.getJogWheelDelta = function (value) { // O
-    // The Wheel control centers on 0x40; find out how much it's moved by.
-    return (-value + 0x40) * 0.1;
-};
+DDJ.jogMove = function (channel, control, value, status, group) {
+    var newValue;
+    if (value < 64) {
+        newValue = value;
+    } else {
+        newValue = value - 128;
+    }
+
+    const deckNumber = script.deckFromGroup(group);
+    if (engine.isScratching(deckNumber)) {
+        engine.scratchTick(deckNumber, newValue); // Scratch!
+    } else {
+        engine.setValue(group, 'jog', newValue); // Pitch bend
+    }
+}
 
 DDJ.jogRingTick = function (channel, control, value, status, group) {
-    DDJ.pitchBendFromJog(group, DDJ.getJogWheelDelta(value));
-};
+    DDJ.jogMove(channel, control, value, status, group);
+}
 
 DDJ.jogRingTickShift = function (channel, control, value, status, group) {
-    DDJ.pitchBendFromJog(
-        DDJ.deckSwitchTable[group],
-        DDJ.getJogWheelDelta(value) * DDJ.jogwheelShiftMultiplier
-    );
+    DDJ.jogMove(channel, control, value * DDJ.jogwheelShiftMultiplier, status, group);
 };
 
 DDJ.jogPlatterTick = function (channel, control, value, status, group) {
-    var deck = DDJ.channelGroups[DDJ.deckSwitchTable[group]];
-    if (DDJ.scratchMode[deck]) {
-        engine.scratchTick(deck + 1, DDJ.getJogWheelDelta(value));
-    } else {
-        DDJ.pitchBendFromJog(DDJ.deckSwitchTable[group], DDJ.getJogWheelDelta(value));
-    }
+    DDJ.jogMove(channel, control, value, status, group);
 };
 
 DDJ.jogPlatterTickShift = function (channel, control, value, status, group) {
-    var deck = DDJ.channelGroups[DDJ.deckSwitchTable[group]];
-    if (DDJ.scratchMode[deck]) {
-        engine.scratchTick(deck + 1, DDJ.getJogWheelDelta(value));
-    } else {
-        DDJ.pitchBendFromJog(
-            DDJ.deckSwitchTable[group],
-            DDJ.getJogWheelDelta(value) * DDJ.jogwheelShiftMultiplier
-        );
-    }
+    DDJ.jogMove(channel, control, value, status * DDJ.jogwheelShiftMultiplier, group);
 };
 
-DDJ.jogTouch = function (channel, control, value, status, group) {
-    var deck = DDJ.channelGroups[DDJ.deckSwitchTable[group]];
+// DDJ.pitchBendFromJog = function (channel, movement) {
+//     var group = (typeof channel === "string" ? channel : "[Channel" + channel + 1 + "]");
 
-    if (DDJ.scratchMode[deck]) {
-        if (value) {
-            engine.scratchEnable(
-                deck + 1,
-                DDJ.scratchSettings.jogResolution,
-                DDJ.scratchSettings.vinylSpeed,
-                DDJ.scratchSettings.alpha,
-                DDJ.scratchSettings.beta,
-                true
-            );
-        } else {
-            engine.scratchDisable(deck + 1, true);
-        }
-    }
-};
+//     // engine.setValue(group, "jog", movement / 5 * DDJ.jogwheelSensitivity);
+//     engine.setValue(group, "jog", 1);
+// };
 
-DDJ.toggleScratch = function (channel, control, value, status, group) {
-    var deck = DDJ.channelGroups[group];
-    if (value) {
-        DDJ.scratchMode[deck] = !DDJ.scratchMode[deck];
-        if (!DDJ.invertVinylSlipButton) {
-            DDJ.nonPadLedControl(deck, DDJ.nonPadLeds.vinyl, DDJ.scratchMode[deck]);
-            DDJ.nonPadLedControl(deck, DDJ.nonPadLeds.shiftVinyl, DDJ.scratchMode[deck]);
-        }
-        if (!DDJ.scratchMode[deck]) {
-            engine.scratchDisable(deck + 1, true);
-        }
-    }
-};
+// DDJ.toggleScratch = function (channel, control, value, status, group) {
+//     var deck = DDJ.channelGroups[group];
+//     if (value) {
+//         DDJ.scratchMode[deck] = !DDJ.scratchMode[deck];
+//         if (!DDJ.invertVinylSlipButton) {
+//             DDJ.nonPadLedControl(deck, DDJ.nonPadLeds.vinyl, DDJ.scratchMode[deck]);
+//             DDJ.nonPadLedControl(deck, DDJ.nonPadLeds.shiftVinyl, DDJ.scratchMode[deck]);
+//         }
+//         if (!DDJ.scratchMode[deck]) {
+//             engine.scratchDisable(deck + 1, true);
+//         }
+//     }
+// };
 
-DDJ.pitchBendFromJog = function (channel, movement) {
-    var group = (typeof channel === "string" ? channel : "[Channel" + channel + 1 + "]");
+// DDJ.deckConverter = function (group) {
+//     var index;
 
-    engine.setValue(group, "jog", movement / 5 * DDJ.jogwheelSensitivity);
-};
+//     if (typeof group === "string") {
+//         for (index in DDJ.deckSwitchTable) {
+//             if (group === DDJ.deckSwitchTable[index]) {
+//                 return DDJ.channelGroups[group];
+//             }
+//         }
+//         return null;
+//     }
+//     return group;
+// };
+
+// DDJ.nonPadLedControl = function (deck, ledNumber, active) {
+//     var nonPadLedsBaseChannel = 0x90,
+//         midiChannelOffset = PioneerDDJSB2.deckConverter(deck);
+
+//     if (midiChannelOffset !== null) {
+//         midi.sendShortMsg(
+//             nonPadLedsBaseChannel + midiChannelOffset,
+//             ledNumber,
+//             active ? 0x7F : 0x00
+//         );
+//     }
+// };
