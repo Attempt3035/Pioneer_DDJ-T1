@@ -14,7 +14,7 @@
         <controls>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.autoLoopFunc</key>
+                <key>DDJ.deckA.autoLoopLength</key>
                 <description>Autoloop knob</description>
                 <status>0xB0</status>
                 <midino>0x13</midino>
@@ -24,7 +24,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.autoLoopFunc</key>
+                <key>DDJ.deckB.autoLoopLength</key>
                 <description>Autoloop knob</description>
                 <status>0xB1</status>
                 <midino>0x13</midino>
@@ -34,7 +34,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.autoLoopFunc</key>
+                <key>DDJ.deckC.autoLoopLength</key>
                 <description>Autoloop knob</description>
                 <status>0xB2</status>
                 <midino>0x13</midino>
@@ -44,7 +44,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.autoLoopFunc</key>
+                <key>DDJ.deckD.autoLoopLength</key>
                 <description>Autoloop knob</description>
                 <status>0xB3</status>
                 <midino>0x13</midino>
@@ -174,7 +174,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.deckA.hotcues[1].input</key>
+                <key>DDJ.deckA.hotcues[5].input</key>
                 <description>Hot Cue 5</description>
                 <status>0x90</status>
                 <midino>0x5F</midino>
@@ -184,7 +184,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.deckA.hotcues[2].input</key>
+                <key>DDJ.deckA.hotcues[6].input</key>
                 <description>Hot Cue 6</description>
                 <status>0x90</status>
                 <midino>0x60</midino>
@@ -194,7 +194,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.deckA.hotcues[3].input</key>
+                <key>DDJ.deckA.hotcues[7].input</key>
                 <description>Hot Cue 7</description>
                 <status>0x90</status>
                 <midino>0x61</midino>
@@ -204,7 +204,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.deckA.hotcues[4].input</key>
+                <key>DDJ.deckA.hotcues[8].input</key>
                 <description>Hot Cue 8</description>
                 <status>0x90</status>
                 <midino>0x62</midino>
@@ -254,7 +254,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.deckB.hotcues[1].input</key>
+                <key>DDJ.deckB.hotcues[5].input</key>
                 <description>Hot Cue 5</description>
                 <status>0x91</status>
                 <midino>0x5F</midino>
@@ -264,7 +264,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.deckB.hotcues[2].input</key>
+                <key>DDJ.deckB.hotcues[6].input</key>
                 <description>Hot Cue 6</description>
                 <status>0x91</status>
                 <midino>0x60</midino>
@@ -274,7 +274,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.deckB.hotcues[3].input</key>
+                <key>DDJ.deckB.hotcues[7].input</key>
                 <description>Hot Cue 7</description>
                 <status>0x91</status>
                 <midino>0x61</midino>
@@ -284,7 +284,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.deckB.hotcues[4].input</key>
+                <key>DDJ.deckB.hotcues[8].input</key>
                 <description>Hot Cue 8</description>
                 <status>0x91</status>
                 <midino>0x62</midino>
@@ -334,7 +334,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.deckC.hotcues[1].input</key>
+                <key>DDJ.deckC.hotcues[5].input</key>
                 <description>Hot Cue 5</description>
                 <status>0x92</status>
                 <midino>0x5F</midino>
@@ -344,7 +344,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.deckC.hotcues[2].input</key>
+                <key>DDJ.deckC.hotcues[6].input</key>
                 <description>Hot Cue 6</description>
                 <status>0x92</status>
                 <midino>0x60</midino>
@@ -354,7 +354,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.deckC.hotcues[3].input</key>
+                <key>DDJ.deckC.hotcues[7].input</key>
                 <description>Hot Cue 7</description>
                 <status>0x92</status>
                 <midino>0x61</midino>
@@ -364,7 +364,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.deckC.hotcues[4].input</key>
+                <key>DDJ.deckC.hotcues[8].input</key>
                 <description>Hot Cue 8</description>
                 <status>0x92</status>
                 <midino>0x62</midino>
@@ -414,7 +414,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.deckD.hotcues[1].input</key>
+                <key>DDJ.deckD.hotcues[5].input</key>
                 <description>Hot Cue 5</description>
                 <status>0x93</status>
                 <midino>0x5F</midino>
@@ -424,7 +424,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.deckD.hotcues[2].input</key>
+                <key>DDJ.deckD.hotcues[6].input</key>
                 <description>Hot Cue 6</description>
                 <status>0x93</status>
                 <midino>0x60</midino>
@@ -434,7 +434,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.deckD.hotcues[3].input</key>
+                <key>DDJ.deckD.hotcues[7].input</key>
                 <description>Hot Cue 7</description>
                 <status>0x93</status>
                 <midino>0x61</midino>
@@ -444,7 +444,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.deckD.hotcues[4].input</key>
+                <key>DDJ.deckD.hotcues[8].input</key>
                 <description>Hot Cue 8</description>
                 <status>0x93</status>
                 <midino>0x62</midino>
@@ -534,7 +534,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.jogPlatterTick</key>
+                <key>DDJ.deckA.pitchWheel.inputWheel</key>
                 <description>Jog (Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
                 <status>0xB0</status>
                 <midino>0x22</midino>
@@ -544,7 +544,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.jogPlatterTick</key>
+                <key>DDJ.deckA.pitchWheel.inputWheel</key>
                 <description>Jog (no Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
                 <status>0xB0</status>
                 <midino>0x23</midino>
@@ -554,7 +554,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.jogPlatterTick</key>
+                <key>DDJ.deckB.pitchWheel.inputWheel</key>
                 <description>Jog (Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
                 <status>0xB1</status>
                 <midino>0x22</midino>
@@ -564,7 +564,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.jogPlatterTick</key>
+                <key>DDJ.deckB.pitchWheel.inputWheel</key>
                 <description>Jog (no Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
                 <status>0xB1</status>
                 <midino>0x23</midino>
@@ -574,7 +574,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.jogPlatterTick</key>
+                <key>DDJ.deckC.pitchWheel.inputWheel</key>
                 <description>Jog (Vinyl Mode) Deck 3, left JOGDIAL (Deck 3 active)</description>
                 <status>0xB2</status>
                 <midino>0x22</midino>
@@ -584,7 +584,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.jogPlatterTick</key>
+                <key>DDJ.deckC.pitchWheel.inputWheel</key>
                 <description>Jog (no Vinyl Mode) Deck 3, left JOGDIAL (Deck 3 active)</description>
                 <status>0xB2</status>
                 <midino>0x23</midino>
@@ -594,7 +594,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.jogPlatterTick</key>
+                <key>DDJ.deckD.pitchWheel.inputWheel</key>
                 <description>Jog (Vinyl Mode) Deck 4, right JOGDIAL (Deck 4 active)</description>
                 <status>0xB3</status>
                 <midino>0x22</midino>
@@ -604,7 +604,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.jogPlatterTick</key>
+                <key>DDJ.deckD.pitchWheel.inputWheel</key>
                 <description>Jog (no Vinyl Mode) Deck 4, right JOGDIAL (Deck 4 active)</description>
                 <status>0xB3</status>
                 <midino>0x23</midino>
@@ -614,7 +614,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.jogPlatterTickShift</key>
+                <key>DDJ.deckA.pitchWheel.inputWheel</key>
                 <description>Jog fast Deck 1, SHIFT left JOGDIAL (Deck 1 active)</description>
                 <status>0xB0</status>
                 <midino>0x1F</midino>
@@ -624,7 +624,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.jogPlatterTickShift</key>
+                <key>DDJ.deckB.pitchWheel.inputWheel</key>
                 <description>Jog fast Deck 2, SHIFT right JOGDIAL (Deck 2 active)</description>
                 <status>0xB1</status>
                 <midino>0x1F</midino>
@@ -634,7 +634,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.jogPlatterTickShift</key>
+                <key>DDJ.deckC.pitchWheel.inputWheel</key>
                 <description>Jog fast Deck 3, SHIFT left JOGDIAL (Deck 3 active)</description>
                 <status>0xB2</status>
                 <midino>0x1F</midino>
@@ -644,7 +644,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.jogPlatterTickShift</key>
+                <key>DDJ.deckD.pitchWheel.inputWheel</key>
                 <description>Jog fast Deck 4, SHIFT right JOGDIAL (Deck 4 active)</description>
                 <status>0xB3</status>
                 <midino>0x1F</midino>
@@ -654,7 +654,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.jogRingTick</key>
+                <key>DDJ.deckA.pitchWheel.inputWheel</key>
                 <description>Jog ring Deck 1, left JOGDIALSIDE (Deck 1 active)</description>
                 <status>0xB0</status>
                 <midino>0x21</midino>
@@ -664,7 +664,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.jogRingTick</key>
+                <key>DDJ.deckB.pitchWheel.inputWheel</key>
                 <description>Jog ring Deck 2, right JOGDIALSIDE (Deck 2 active)</description>
                 <status>0xB1</status>
                 <midino>0x21</midino>
@@ -674,7 +674,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.jogRingTick</key>
+                <key>DDJ.deckC.pitchWheel.inputWheel</key>
                 <description>Jog ring Deck 3, left JOGDIALSIDE (Deck 3 active)</description>
                 <status>0xB2</status>
                 <midino>0x21</midino>
@@ -684,7 +684,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.jogRingTick</key>
+                <key>DDJ.deckD.pitchWheel.inputWheel</key>
                 <description>Jog ring Deck 4, right JOGDIALSIDE (Deck 4 active)</description>
                 <status>0xB3</status>
                 <midino>0x21</midino>
@@ -694,7 +694,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.jogRingTickShift</key>
+                <key>DDJ.deckA.pitchWheel.inputWheel</key>
                 <description>Jog ring shift Deck 1, SHIFT left JOGDIALSIDE (Deck 1 active)</description>
                 <status>0xB0</status>
                 <midino>0x26</midino>
@@ -704,7 +704,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.jogRingTickShift</key>
+                <key>DDJ.deckB.pitchWheel.inputWheel</key>
                 <description>Jog ring shift Deck 2, SHIFT right JOGDIALSIDE (Deck 2 active)</description>
                 <status>0xB1</status>
                 <midino>0x26</midino>
@@ -714,7 +714,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.jogRingTickShift</key>
+                <key>DDJ.deckC.pitchWheel.inputWheel</key>
                 <description>Jog ring shift Deck 3, SHIFT left JOGDIALSIDE (Deck 3 active)</description>
                 <status>0xB2</status>
                 <midino>0x26</midino>
@@ -724,7 +724,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.jogRingTickShift</key>
+                <key>DDJ.deckD.pitchWheel.inputWheel</key>
                 <description>Jog ring shift Deck 4, SHIFT right JOGDIALSIDE (Deck 4 active)</description>
                 <status>0xB3</status>
                 <midino>0x26</midino>
@@ -734,7 +734,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.jogTouch</key>
+                <key>DDJ.deckA.scratchWheel.inputTouch</key>
                 <description>Jog touch (Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
                 <status>0x90</status>
                 <midino>0x36</midino>
@@ -744,7 +744,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.jogTouch</key>
+                <key>DDJ.deckA.scratchWheel.inputTouch</key>
                 <description>Jog touch (No Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
                 <status>0x90</status>
                 <midino>0x35</midino>
@@ -754,7 +754,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.jogTouch</key>
+                <key>DDJ.deckA.scratchWheel.inputTouch</key>
                 <description>Jog shift touch Deck 4, SHIFT right JOGDIAL (Deck 1 active)</description>
                 <status>0x90</status>
                 <midino>0x67</midino>
@@ -764,7 +764,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.jogTouch</key>
+                <key>DDJ.deckB.scratchWheel.inputTouch</key>
                 <description>Jog touch (Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
                 <status>0x91</status>
                 <midino>0x36</midino>
@@ -774,7 +774,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.jogTouch</key>
+                <key>DDJ.deckB.scratchWheel.inputTouch</key>
                 <description>Jog touch (No Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
                 <status>0x91</status>
                 <midino>0x35</midino>
@@ -784,7 +784,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.jogTouch</key>
+                <key>DDJ.deckB.scratchWheel.inputTouch</key>
                 <description>Jog shift touch Deck 2, SHIFT right JOGDIAL (Deck 2 active)</description>
                 <status>0x91</status>
                 <midino>0x67</midino>
@@ -794,7 +794,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.jogTouch</key>
+                <key>DDJ.deckC.scratchWheel.inputTouch</key>
                 <description>Jog touch (Vinyl Mode) Deck 3, left JOGDIAL (Deck 3 active)</description>
                 <status>0x92</status>
                 <midino>0x36</midino>
@@ -804,7 +804,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.jogTouch</key>
+                <key>DDJ.deckC.scratchWheel.inputTouch</key>
                 <description>Jog touch (No Vinyl Mode) Deck 3, left JOGDIAL (Deck 3 active)</description>
                 <status>0x92</status>
                 <midino>0x35</midino>
@@ -814,7 +814,7 @@
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.jogTouch</key>
+                <key>DDJ.deckC.scratchWheel.inputTouch</key>
                 <description>Jog shift touch Deck 3, SHIFT left JOGDIAL (Deck 3 active)</description>
                 <status>0x92</status>
                 <midino>0x67</midino>
@@ -824,7 +824,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.jogTouch</key>
+                <key>DDJ.deckD.scratchWheel.inputTouch</key>
                 <description>Jog touch (Vinyl Mode) Deck 4, right JOGDIAL (Deck 4 active)</description>
                 <status>0x93</status>
                 <midino>0x36</midino>
@@ -834,7 +834,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.jogTouch</key>
+                <key>DDJ.deckD.scratchWheel.inputTouch</key>
                 <description>Jog touch (No Vinyl Mode) Deck 4, right JOGDIAL (Deck 4 active)</description>
                 <status>0x93</status>
                 <midino>0x35</midino>
@@ -844,7 +844,7 @@
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.jogTouch</key>
+                <key>DDJ.deckD.scratchWheel.inputTouch</key>
                 <description>Jog shift touch Deck 4, SHIFT right JOGDIAL (Deck 4 active)</description>
                 <status>0x93</status>
                 <midino>0x67</midino>
@@ -1733,63 +1733,5 @@
                 </options>
             </control>
         </controls>
-        <outputs>
-            <output>
-                <group>[Channel1]</group>
-                <key>keylock</key>
-                <status>0x90</status>
-                <midino>0x1A</midino>
-                <minimum>0.5</minimum>
-            </output>
-            <output>
-                <group>[Channel1]</group>
-                <key>sync_enabled</key>
-                <status>0x96</status>
-                <midino>0x58</midino>
-                <minimum>0.5</minimum>
-            </output>
-            <output>
-                <group>[Channel2]</group>
-                <key>keylock</key>
-                <status>0x91</status>
-                <midino>0x1A</midino>
-                <minimum>0.5</minimum>
-            </output>
-            <output>
-                <group>[Channel2]</group>
-                <key>sync_enabled</key>
-                <status>0x96</status>
-                <midino>0x59</midino>
-                <minimum>0.5</minimum>
-            </output>
-            <output>
-                <group>[Channel3]</group>
-                <key>keylock</key>
-                <status>0x92</status>
-                <midino>0x1A</midino>
-                <minimum>0.5</minimum>
-            </output>
-            <output>
-                <group>[Channel3]</group>
-                <key>sync_enabled</key>
-                <status>0x96</status>
-                <midino>0x5A</midino>
-                <minimum>0.5</minimum>
-            </output>
-            <output>
-                <group>[Channel4]</group>
-                <key>keylock</key>
-                <status>0x93</status>
-                <midino>0x1A</midino>
-                <minimum>0.5</minimum>
-            </output>
-            <output>
-                <group>[Channel4]</group>
-                <key>sync_enabled</key>
-                <status>0x96</status>
-                <midino>0x5B</midino>
-                <minimum>0.5</minimum>
-            </output>
-        </outputs>
     </controller>
 </MixxxControllerPreset>
