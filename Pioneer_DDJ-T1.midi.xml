@@ -7,1039 +7,49 @@
     </info>
     <controller id="pioneer-ddj-t1">
         <scriptfiles>
-            <file filename="lodash.mixxx.js" functionprefix="" />
-            <file filename="midi-components-0.0.js" functionprefix="" />
-            <file filename="Pioneer_DDJ-T1.js" functionprefix="DDJ" />
+            <file filename="lodash.mixxx.js" functionprefix=""/>
+            <file filename="midi-components-0.0.js" functionprefix=""/>
+            <file filename="Pioneer_DDJ-T1.js" functionprefix="DDJ"/>
         </scriptfiles>
         <controls>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ.deckA.autoLoopLength</key>
-                <description>Autoloop knob</description>
+                <key>DDJ.deckA.tempo.inputMSB</key>
+                <description>Tempo Slider</description>
                 <status>0xB0</status>
-                <midino>0x13</midino>
+                <midino>0x00</midino>
                 <options>
-                    <script-binding />
+                    <script-binding/>
                 </options>
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ.deckB.autoLoopLength</key>
-                <description>Autoloop knob</description>
+                <key>DDJ.deckB.tempo.inputMSB</key>
+                <description>Tempo Slider</description>
                 <status>0xB1</status>
-                <midino>0x13</midino>
+                <midino>0x00</midino>
                 <options>
-                    <script-binding />
+                    <fourteen-bit-msb/>
                 </options>
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>DDJ.deckC.autoLoopLength</key>
-                <description>Autoloop knob</description>
+                <key>DDJ.deckC.tempo.inputMSB</key>
+                <description>Tempo Slider</description>
                 <status>0xB2</status>
-                <midino>0x13</midino>
+                <midino>0x00</midino>
                 <options>
-                    <script-binding />
+                    <fourteen-bit-msb/>
                 </options>
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>DDJ.deckD.autoLoopLength</key>
-                <description>Autoloop knob</description>
+                <key>DDJ.deckD.tempo.inputMSB</key>
+                <description>Tempo Slider</description>
                 <status>0xB3</status>
-                <midino>0x13</midino>
+                <midino>0x00</midino>
                 <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.cueButton.input</key>
-                <description>Cue Button</description>
-                <status>0x90</status>
-                <midino>0x0C</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.cueButton.input</key>
-                <description>Cue Button</description>
-                <status>0x91</status>
-                <midino>0x0C</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.cueButton.input</key>
-                <description>Cue Button</description>
-                <status>0x92</status>
-                <midino>0x0C</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.cueButton.input</key>
-                <description>Cue Button</description>
-                <status>0x93</status>
-                <midino>0x0C</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.cueButton.input</key>
-                <description>Shift Cue Button</description>
-                <status>0x90</status>
-                <midino>0x48</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.cueButton.input</key>
-                <description>Shift Cue Button</description>
-                <status>0x91</status>
-                <midino>0x48</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.cueButton.input</key>
-                <description>Shift Cue Button</description>
-                <status>0x92</status>
-                <midino>0x48</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.cueButton.input</key>
-                <description>Shift Cue Button</description>
-                <status>0x93</status>
-                <midino>0x48</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.hotcues[1].input</key>
-                <description>Hot Cue 1</description>
-                <status>0x90</status>
-                <midino>0x2E</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.hotcues[2].input</key>
-                <description>Hot Cue 2</description>
-                <status>0x90</status>
-                <midino>0x2F</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.hotcues[3].input</key>
-                <description>Hot Cue 3</description>
-                <status>0x90</status>
-                <midino>0x30</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.hotcues[4].input</key>
-                <description>Hot Cue 4</description>
-                <status>0x90</status>
-                <midino>0x31</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.hotcues[5].input</key>
-                <description>Hot Cue 5</description>
-                <status>0x90</status>
-                <midino>0x5F</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.hotcues[6].input</key>
-                <description>Hot Cue 6</description>
-                <status>0x90</status>
-                <midino>0x60</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.hotcues[7].input</key>
-                <description>Hot Cue 7</description>
-                <status>0x90</status>
-                <midino>0x61</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.hotcues[8].input</key>
-                <description>Hot Cue 8</description>
-                <status>0x90</status>
-                <midino>0x62</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.hotcues[1].input</key>
-                <description>Hot Cue 1</description>
-                <status>0x91</status>
-                <midino>0x2E</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.hotcues[2].input</key>
-                <description>Hot Cue 2</description>
-                <status>0x91</status>
-                <midino>0x2F</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.hotcues[3].input</key>
-                <description>Hot Cue 3</description>
-                <status>0x91</status>
-                <midino>0x30</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.hotcues[4].input</key>
-                <description>Hot Cue 4</description>
-                <status>0x91</status>
-                <midino>0x31</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.hotcues[5].input</key>
-                <description>Hot Cue 5</description>
-                <status>0x91</status>
-                <midino>0x5F</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.hotcues[6].input</key>
-                <description>Hot Cue 6</description>
-                <status>0x91</status>
-                <midino>0x60</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.hotcues[7].input</key>
-                <description>Hot Cue 7</description>
-                <status>0x91</status>
-                <midino>0x61</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.hotcues[8].input</key>
-                <description>Hot Cue 8</description>
-                <status>0x91</status>
-                <midino>0x62</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.hotcues[1].input</key>
-                <description>Hot Cue 1</description>
-                <status>0x92</status>
-                <midino>0x2E</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.hotcues[2].input</key>
-                <description>Hot Cue 2</description>
-                <status>0x92</status>
-                <midino>0x2F</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.hotcues[3].input</key>
-                <description>Hot Cue 3</description>
-                <status>0x92</status>
-                <midino>0x30</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.hotcues[4].input</key>
-                <description>Hot Cue 4</description>
-                <status>0x92</status>
-                <midino>0x31</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.hotcues[5].input</key>
-                <description>Hot Cue 5</description>
-                <status>0x92</status>
-                <midino>0x5F</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.hotcues[6].input</key>
-                <description>Hot Cue 6</description>
-                <status>0x92</status>
-                <midino>0x60</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.hotcues[7].input</key>
-                <description>Hot Cue 7</description>
-                <status>0x92</status>
-                <midino>0x61</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.hotcues[8].input</key>
-                <description>Hot Cue 8</description>
-                <status>0x92</status>
-                <midino>0x62</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.hotcues[1].input</key>
-                <description>Hot Cue 1</description>
-                <status>0x93</status>
-                <midino>0x2E</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.hotcues[2].input</key>
-                <description>Hot Cue 2</description>
-                <status>0x93</status>
-                <midino>0x2F</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.hotcues[3].input</key>
-                <description>Hot Cue 3</description>
-                <status>0x93</status>
-                <midino>0x30</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.hotcues[4].input</key>
-                <description>Hot Cue 4</description>
-                <status>0x93</status>
-                <midino>0x31</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.hotcues[5].input</key>
-                <description>Hot Cue 5</description>
-                <status>0x93</status>
-                <midino>0x5F</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.hotcues[6].input</key>
-                <description>Hot Cue 6</description>
-                <status>0x93</status>
-                <midino>0x60</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.hotcues[7].input</key>
-                <description>Hot Cue 7</description>
-                <status>0x93</status>
-                <midino>0x61</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.hotcues[8].input</key>
-                <description>Hot Cue 8</description>
-                <status>0x93</status>
-                <midino>0x62</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.pflButton.input</key>
-                <description>Headphones Cue</description>
-                <status>0x96</status>
-                <midino>0x54</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.pflButton.input</key>
-                <description>Headphones Cue</description>
-                <status>0x96</status>
-                <midino>0x55</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.pflButton.input</key>
-                <description>Headphones Cue</description>
-                <status>0x96</status>
-                <midino>0x56</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.pflButton.input</key>
-                <description>Headphones Cue</description>
-                <status>0x96</status>
-                <midino>0x57</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.playButton.input</key>
-                <description>Left Deck A play button.</description>
-                <status>0x90</status>
-                <midino>0x0B</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.playButton.input</key>
-                <description>Right Deck B play button.</description>
-                <status>0x91</status>
-                <midino>0x0B</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.playButton.input</key>
-                <description>Left Deck C play button.</description>
-                <status>0x92</status>
-                <midino>0x0B</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.playButton.input</key>
-                <description>Right Deck D play button.</description>
-                <status>0x93</status>
-                <midino>0x0B</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.pitchWheel.inputWheel</key>
-                <description>Jog (Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
-                <status>0xB0</status>
-                <midino>0x22</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.pitchWheel.inputWheel</key>
-                <description>Jog (no Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
-                <status>0xB0</status>
-                <midino>0x23</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.pitchWheel.inputWheel</key>
-                <description>Jog (Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
-                <status>0xB1</status>
-                <midino>0x22</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.pitchWheel.inputWheel</key>
-                <description>Jog (no Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
-                <status>0xB1</status>
-                <midino>0x23</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.pitchWheel.inputWheel</key>
-                <description>Jog (Vinyl Mode) Deck 3, left JOGDIAL (Deck 3 active)</description>
-                <status>0xB2</status>
-                <midino>0x22</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.pitchWheel.inputWheel</key>
-                <description>Jog (no Vinyl Mode) Deck 3, left JOGDIAL (Deck 3 active)</description>
-                <status>0xB2</status>
-                <midino>0x23</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.pitchWheel.inputWheel</key>
-                <description>Jog (Vinyl Mode) Deck 4, right JOGDIAL (Deck 4 active)</description>
-                <status>0xB3</status>
-                <midino>0x22</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.pitchWheel.inputWheel</key>
-                <description>Jog (no Vinyl Mode) Deck 4, right JOGDIAL (Deck 4 active)</description>
-                <status>0xB3</status>
-                <midino>0x23</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.pitchWheel.inputWheel</key>
-                <description>Jog fast Deck 1, SHIFT left JOGDIAL (Deck 1 active)</description>
-                <status>0xB0</status>
-                <midino>0x1F</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.pitchWheel.inputWheel</key>
-                <description>Jog fast Deck 2, SHIFT right JOGDIAL (Deck 2 active)</description>
-                <status>0xB1</status>
-                <midino>0x1F</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.pitchWheel.inputWheel</key>
-                <description>Jog fast Deck 3, SHIFT left JOGDIAL (Deck 3 active)</description>
-                <status>0xB2</status>
-                <midino>0x1F</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.pitchWheel.inputWheel</key>
-                <description>Jog fast Deck 4, SHIFT right JOGDIAL (Deck 4 active)</description>
-                <status>0xB3</status>
-                <midino>0x1F</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.pitchWheel.inputWheel</key>
-                <description>Jog ring Deck 1, left JOGDIALSIDE (Deck 1 active)</description>
-                <status>0xB0</status>
-                <midino>0x21</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.pitchWheel.inputWheel</key>
-                <description>Jog ring Deck 2, right JOGDIALSIDE (Deck 2 active)</description>
-                <status>0xB1</status>
-                <midino>0x21</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.pitchWheel.inputWheel</key>
-                <description>Jog ring Deck 3, left JOGDIALSIDE (Deck 3 active)</description>
-                <status>0xB2</status>
-                <midino>0x21</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.pitchWheel.inputWheel</key>
-                <description>Jog ring Deck 4, right JOGDIALSIDE (Deck 4 active)</description>
-                <status>0xB3</status>
-                <midino>0x21</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.pitchWheel.inputWheel</key>
-                <description>Jog ring shift Deck 1, SHIFT left JOGDIALSIDE (Deck 1 active)</description>
-                <status>0xB0</status>
-                <midino>0x26</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.pitchWheel.inputWheel</key>
-                <description>Jog ring shift Deck 2, SHIFT right JOGDIALSIDE (Deck 2 active)</description>
-                <status>0xB1</status>
-                <midino>0x26</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.pitchWheel.inputWheel</key>
-                <description>Jog ring shift Deck 3, SHIFT left JOGDIALSIDE (Deck 3 active)</description>
-                <status>0xB2</status>
-                <midino>0x26</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.pitchWheel.inputWheel</key>
-                <description>Jog ring shift Deck 4, SHIFT right JOGDIALSIDE (Deck 4 active)</description>
-                <status>0xB3</status>
-                <midino>0x26</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.scratchWheel.inputTouch</key>
-                <description>Jog touch (Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
-                <status>0x90</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.scratchWheel.inputTouch</key>
-                <description>Jog touch (No Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
-                <status>0x90</status>
-                <midino>0x35</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>DDJ.deckA.scratchWheel.inputTouch</key>
-                <description>Jog shift touch Deck 4, SHIFT right JOGDIAL (Deck 1 active)</description>
-                <status>0x90</status>
-                <midino>0x67</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.scratchWheel.inputTouch</key>
-                <description>Jog touch (Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
-                <status>0x91</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.scratchWheel.inputTouch</key>
-                <description>Jog touch (No Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
-                <status>0x91</status>
-                <midino>0x35</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>DDJ.deckB.scratchWheel.inputTouch</key>
-                <description>Jog shift touch Deck 2, SHIFT right JOGDIAL (Deck 2 active)</description>
-                <status>0x91</status>
-                <midino>0x67</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.scratchWheel.inputTouch</key>
-                <description>Jog touch (Vinyl Mode) Deck 3, left JOGDIAL (Deck 3 active)</description>
-                <status>0x92</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.scratchWheel.inputTouch</key>
-                <description>Jog touch (No Vinyl Mode) Deck 3, left JOGDIAL (Deck 3 active)</description>
-                <status>0x92</status>
-                <midino>0x35</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>DDJ.deckC.scratchWheel.inputTouch</key>
-                <description>Jog shift touch Deck 3, SHIFT left JOGDIAL (Deck 3 active)</description>
-                <status>0x92</status>
-                <midino>0x67</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.scratchWheel.inputTouch</key>
-                <description>Jog touch (Vinyl Mode) Deck 4, right JOGDIAL (Deck 4 active)</description>
-                <status>0x93</status>
-                <midino>0x36</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.scratchWheel.inputTouch</key>
-                <description>Jog touch (No Vinyl Mode) Deck 4, right JOGDIAL (Deck 4 active)</description>
-                <status>0x93</status>
-                <midino>0x35</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>DDJ.deckD.scratchWheel.inputTouch</key>
-                <description>Jog shift touch Deck 4, SHIFT right JOGDIAL (Deck 4 active)</description>
-                <status>0x93</status>
-                <midino>0x67</midino>
-                <options>
-                    <script-binding />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>LoadSelectedTrack</key>
-                <description>Load Track</description>
-                <status>0x96</status>
-                <midino>0x46</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>LoadSelectedTrack</key>
-                <description>Load Track</description>
-                <status>0x96</status>
-                <midino>0x47</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>LoadSelectedTrack</key>
-                <description>Load Track</description>
-                <status>0x96</status>
-                <midino>0x48</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>LoadSelectedTrack</key>
-                <description>Load Track</description>
-                <status>0x96</status>
-                <midino>0x49</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Library]</group>
-                <key>MoveFocus</key>
-                <description>Tree Button</description>
-                <status>0x96</status>
-                <midino>0x42</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Library]</group>
-                <key>MoveVertical</key>
-                <description>Browse Dial (Scan Tracks)</description>
-                <status>0xB6</status>
-                <midino>0x40</midino>
-                <options>
-                    <selectknob />
-                </options>
-            </control>
-            <control>
-                <group>[Master]</group>
-                <key>maximize_library</key>
-                <description>View Button (Push Browse Dial)</description>
-                <status>0x96</status>
-                <midino>0x41</midino>
-                <options>
-                    <selectknob />
-                </options>
-            </control>
-            <control>
-                <group>[Recording]</group>
-                <key>toggle_recording</key>
-                <description>Favourites / Record Button</description>
-                <status>0x96</status>
-                <midino>0x43</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>beatloop_activate</key>
-                <description>Auto Loop Button (Press Move Grid Dial)</description>
-                <status>0x90</status>
-                <midino>0x14</midino>
-                <options>
-                    <selectknob />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>beatloop_activate</key>
-                <description>Auto Loop Button (Press Move Grid Dial)</description>
-                <status>0x91</status>
-                <midino>0x14</midino>
-                <options>
-                    <selectknob />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>beatloop_activate</key>
-                <description>Auto Loop Button (Press Move Grid Dial)</description>
-                <status>0x92</status>
-                <midino>0x14</midino>
-                <options>
-                    <selectknob />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>beatloop_activate</key>
-                <description>Auto Loop Button (Press Move Grid Dial)</description>
-                <status>0x93</status>
-                <midino>0x14</midino>
-                <options>
-                    <selectknob />
-                </options>
-            </control>
-            <control>
-                <group>[Master]</group>
-                <key>crossfader</key>
-                <description>Crossfader</description>
-                <status>0xB6</status>
-                <midino>0x1F</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EffectRack1_EffectUnit1_Effect1]</group>
-                <key>enabled</key>
-                <description>Toggle Effect Active</description>
-                <status>0x94</status>
-                <midino>0x47</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EffectRack1_EffectUnit1_Effect2]</group>
-                <key>enabled</key>
-                <description>Toggle Effect Active</description>
-                <status>0x94</status>
-                <midino>0x48</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EffectRack1_EffectUnit1_Effect3]</group>
-                <key>enabled</key>
-                <description>Toggle Effect Active</description>
-                <status>0x94</status>
-                <midino>0x49</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EffectRack1_EffectUnit2_Effect1]</group>
-                <key>enabled</key>
-                <description>Toggle Effect Active</description>
-                <status>0x95</status>
-                <midino>0x47</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EffectRack1_EffectUnit2_Effect2]</group>
-                <key>enabled</key>
-                <description>Toggle Effect Active</description>
-                <status>0x95</status>
-                <midino>0x48</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EffectRack1_EffectUnit2_Effect3]</group>
-                <key>enabled</key>
-                <description>Toggle Effect Active</description>
-                <status>0x95</status>
-                <midino>0x49</midino>
-                <options>
-                    <normal />
+                    <fourteen-bit-msb/>
                 </options>
             </control>
             <control>
@@ -1049,17 +59,7 @@
                 <status>0xB6</status>
                 <midino>0x00</midino>
                 <options>
-                    <soft-takeover />
-                </options>
-            </control>
-            <control>
-                <group>[Master]</group>
-                <key>headGain</key>
-                <description>Cue Gain</description>
-                <status>0xB6</status>
-                <midino>0x02</midino>
-                <options>
-                    <normal />
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
@@ -1069,167 +69,7 @@
                 <status>0xB6</status>
                 <midino>0x01</midino>
                 <options>
-                    <soft-takeover />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>keylock</key>
-                <description>Key Lock Button</description>
-                <status>0x90</status>
-                <midino>0x1A</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>keylock</key>
-                <description>Key Lock Button</description>
-                <status>0x91</status>
-                <midino>0x1A</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>keylock</key>
-                <description>Key Lock Button</description>
-                <status>0x92</status>
-                <midino>0x1A</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>keylock</key>
-                <description>Key Lock Button</description>
-                <status>0x93</status>
-                <midino>0x1A</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>loop_in</key>
-                <description>Loop In (In Adjust) Button</description>
-                <status>0x90</status>
-                <midino>0x10</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>loop_in</key>
-                <description>Loop In (In Adjust) Button</description>
-                <status>0x91</status>
-                <midino>0x10</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>loop_in</key>
-                <description>Loop In (In Adjust) Button</description>
-                <status>0x92</status>
-                <midino>0x10</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>loop_in</key>
-                <description>Loop In (In Adjust) Button</description>
-                <status>0x93</status>
-                <midino>0x10</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>loop_out</key>
-                <description>Loop Out (Out Adjust) Button</description>
-                <status>0x90</status>
-                <midino>0x11</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>loop_out</key>
-                <description>Loop Out (Out Adjust) Button</description>
-                <status>0x91</status>
-                <midino>0x11</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>loop_out</key>
-                <description>Loop Out (Out Adjust) Button</description>
-                <status>0x92</status>
-                <midino>0x11</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>loop_out</key>
-                <description>Loop Out (Out Adjust) Button</description>
-                <status>0x93</status>
-                <midino>0x11</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>loop_exit</key>
-                <description>Loop Active Button</description>
-                <status>0x90</status>
-                <midino>0x12</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>loop_exit</key>
-                <description>Loop Active Button</description>
-                <status>0x91</status>
-                <midino>0x12</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>loop_exit</key>
-                <description>Loop Active Button</description>
-                <status>0x92</status>
-                <midino>0x12</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>loop_exit</key>
-                <description>Loop Active Button</description>
-                <status>0x93</status>
-                <midino>0x12</midino>
-                <options>
-                    <normal />
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
@@ -1239,27 +79,7 @@
                 <status>0xB4</status>
                 <midino>0x02</midino>
                 <options>
-                    <soft-takeover />
-                </options>
-            </control>
-            <control>
-                <group>[EffectRack1_EffectUnit1_Effect2]</group>
-                <key>meta</key>
-                <description>Effect Amount</description>
-                <status>0xB4</status>
-                <midino>0x04</midino>
-                <options>
-                    <soft-takeover />
-                </options>
-            </control>
-            <control>
-                <group>[EffectRack1_EffectUnit1_Effect3]</group>
-                <key>meta</key>
-                <description>Effect Amount</description>
-                <status>0xB4</status>
-                <midino>0x06</midino>
-                <options>
-                    <soft-takeover />
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
@@ -1269,187 +89,17 @@
                 <status>0xB5</status>
                 <midino>0x02</midino>
                 <options>
-                    <normal />
+                    <normal/>
                 </options>
             </control>
             <control>
-                <group>[EffectRack1_EffectUnit2_Effect2]</group>
-                <key>meta</key>
-                <description>Effect Amount</description>
-                <status>0xB5</status>
-                <midino>0x04</midino>
-                <options>
-                    <soft-takeover />
-                </options>
-            </control>
-            <control>
-                <group>[EffectRack1_EffectUnit2_Effect3]</group>
-                <key>meta</key>
-                <description>Effect Amount</description>
-                <status>0xB5</status>
-                <midino>0x06</midino>
-                <options>
-                    <soft-takeover />
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
-                <key>parameter1</key>
-                <description>Channel EQ Low</description>
+                <group>[Master]</group>
+                <key>headGain</key>
+                <description>Cue Gain</description>
                 <status>0xB6</status>
-                <midino>0x0F</midino>
+                <midino>0x02</midino>
                 <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
-                <key>parameter1</key>
-                <description>Channel EQ Low</description>
-                <status>0xB6</status>
-                <midino>0x10</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel3]_Effect1]</group>
-                <key>parameter1</key>
-                <description>Channel EQ Low</description>
-                <status>0xB6</status>
-                <midino>0x11</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel4]_Effect1]</group>
-                <key>parameter1</key>
-                <description>Channel EQ Low</description>
-                <status>0xB6</status>
-                <midino>0x12</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
-                <key>parameter2</key>
-                <description>Channel EQ Mid</description>
-                <status>0xB6</status>
-                <midino>0x0B</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
-                <key>parameter2</key>
-                <description>Channel EQ Mid</description>
-                <status>0xB6</status>
-                <midino>0x0C</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel3]_Effect1]</group>
-                <key>parameter2</key>
-                <description>Channel EQ Mid</description>
-                <status>0xB6</status>
-                <midino>0x0D</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel4]_Effect1]</group>
-                <key>parameter2</key>
-                <description>Channel EQ Mid</description>
-                <status>0xB6</status>
-                <midino>0x0E</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
-                <key>parameter3</key>
-                <description>Channel EQ High</description>
-                <status>0xB6</status>
-                <midino>0x07</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
-                <key>parameter3</key>
-                <description>Channel EQ High</description>
-                <status>0xB6</status>
-                <midino>0x08</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel3]_Effect1]</group>
-                <key>parameter3</key>
-                <description>Channel EQ High</description>
-                <status>0xB6</status>
-                <midino>0x09</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[EqualizerRack1_[Channel4]_Effect1]</group>
-                <key>parameter3</key>
-                <description>Channel EQ High</description>
-                <status>0xB6</status>
-                <midino>0x0A</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>pregain</key>
-                <description>Channel Gain</description>
-                <status>0xB6</status>
-                <midino>0x03</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>pregain</key>
-                <description>Channel Gain</description>
-                <status>0xB6</status>
-                <midino>0x04</midino>
-                <options>
-                    <soft-takeover />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>pregain</key>
-                <description>Channel Gain</description>
-                <status>0xB6</status>
-                <midino>0x05</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>pregain</key>
-                <description>Channel Gain</description>
-                <status>0xB6</status>
-                <midino>0x06</midino>
-                <options>
-                    <normal />
+                    <normal/>
                 </options>
             </control>
             <control>
@@ -1459,7 +109,7 @@
                 <status>0xB0</status>
                 <midino>0x03</midino>
                 <options>
-                    <normal />
+                    <normal/>
                 </options>
             </control>
             <control>
@@ -1469,7 +119,7 @@
                 <status>0xB1</status>
                 <midino>0x03</midino>
                 <options>
-                    <normal />
+                    <normal/>
                 </options>
             </control>
             <control>
@@ -1479,7 +129,7 @@
                 <status>0xB2</status>
                 <midino>0x03</midino>
                 <options>
-                    <normal />
+                    <normal/>
                 </options>
             </control>
             <control>
@@ -1489,127 +139,17 @@
                 <status>0xB3</status>
                 <midino>0x03</midino>
                 <options>
-                    <normal />
+                    <normal/>
                 </options>
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>quantize</key>
-                <description>Tempo Range Button</description>
-                <status>0x90</status>
-                <midino>0x19</midino>
+                <key>pregain</key>
+                <description>Channel Gain</description>
+                <status>0xB6</status>
+                <midino>0x03</midino>
                 <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>quantize</key>
-                <description>Tempo Range Button</description>
-                <status>0x91</status>
-                <midino>0x19</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>quantize</key>
-                <description>Tempo Range Button</description>
-                <status>0x92</status>
-                <midino>0x19</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>quantize</key>
-                <description>Tempo Range Button</description>
-                <status>0x93</status>
-                <midino>0x19</midino>
-                <options>
-                    <normal />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>rate</key>
-                <description>Tempo Slider</description>
-                <status>0xB0</status>
-                <midino>0x00</midino>
-                <options>
-                    <fourteen-bit-msb />
-                </options>
-            </control>
-            <control>
-                <group>[Channel1]</group>
-                <key>rate</key>
-                <description>Tempo Slider</description>
-                <status>0xB0</status>
-                <midino>0x20</midino>
-                <options>
-                    <fourteen-bit-lsb />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>rate</key>
-                <description>Tempo Slider</description>
-                <status>0xB1</status>
-                <midino>0x00</midino>
-                <options>
-                    <fourteen-bit-msb />
-                </options>
-            </control>
-            <control>
-                <group>[Channel2]</group>
-                <key>rate</key>
-                <description>Tempo Slider</description>
-                <status>0xB1</status>
-                <midino>0x20</midino>
-                <options>
-                    <fourteen-bit-lsb />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>rate</key>
-                <description>Tempo Slider</description>
-                <status>0xB2</status>
-                <midino>0x00</midino>
-                <options>
-                    <fourteen-bit-msb />
-                </options>
-            </control>
-            <control>
-                <group>[Channel3]</group>
-                <key>rate</key>
-                <description>Tempo Slider</description>
-                <status>0xB2</status>
-                <midino>0x20</midino>
-                <options>
-                    <fourteen-bit-lsb />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>rate</key>
-                <description>Tempo Slider</description>
-                <status>0xB3</status>
-                <midino>0x00</midino>
-                <options>
-                    <fourteen-bit-msb />
-                </options>
-            </control>
-            <control>
-                <group>[Channel4]</group>
-                <key>rate</key>
-                <description>Tempo Slider</description>
-                <status>0xB3</status>
-                <midino>0x20</midino>
-                <options>
-                    <fourteen-bit-lsb />
+                    <normal/>
                 </options>
             </control>
             <control>
@@ -1619,7 +159,7 @@
                 <status>0xB0</status>
                 <midino>0x04</midino>
                 <options>
-                    <normal />
+                    <normal/>
                 </options>
             </control>
             <control>
@@ -1629,7 +169,7 @@
                 <status>0xB1</status>
                 <midino>0x04</midino>
                 <options>
-                    <normal />
+                    <normal/>
                 </options>
             </control>
             <control>
@@ -1639,7 +179,7 @@
                 <status>0xB2</status>
                 <midino>0x04</midino>
                 <options>
-                    <normal />
+                    <normal/>
                 </options>
             </control>
             <control>
@@ -1649,47 +189,437 @@
                 <status>0xB3</status>
                 <midino>0x04</midino>
                 <options>
-                    <normal />
+                    <normal/>
                 </options>
             </control>
             <control>
-                <group>[Channel1]</group>
-                <key>sync_enabled</key>
-                <description>Channel Sync Button</description>
-                <status>0x96</status>
-                <midino>0x58</midino>
+                <group>[EffectRack1_EffectUnit1_Effect2]</group>
+                <key>meta</key>
+                <description>Effect Amount</description>
+                <status>0xB4</status>
+                <midino>0x04</midino>
                 <options>
-                    <normal />
+                    <soft-takeover/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2_Effect2]</group>
+                <key>meta</key>
+                <description>Effect Amount</description>
+                <status>0xB5</status>
+                <midino>0x04</midino>
+                <options>
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>sync_enabled</key>
-                <description>Channel Sync Button</description>
-                <status>0x96</status>
-                <midino>0x59</midino>
+                <key>pregain</key>
+                <description>Channel Gain</description>
+                <status>0xB6</status>
+                <midino>0x04</midino>
                 <options>
-                    <normal />
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
                 <group>[Channel3]</group>
-                <key>sync_enabled</key>
-                <description>Channel Sync Button</description>
-                <status>0x96</status>
-                <midino>0x5A</midino>
+                <key>pregain</key>
+                <description>Channel Gain</description>
+                <status>0xB6</status>
+                <midino>0x05</midino>
                 <options>
-                    <normal />
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect3]</group>
+                <key>meta</key>
+                <description>Effect Amount</description>
+                <status>0xB4</status>
+                <midino>0x06</midino>
+                <options>
+                    <soft-takeover/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2_Effect3]</group>
+                <key>meta</key>
+                <description>Effect Amount</description>
+                <status>0xB5</status>
+                <midino>0x06</midino>
+                <options>
+                    <soft-takeover/>
                 </options>
             </control>
             <control>
                 <group>[Channel4]</group>
-                <key>sync_enabled</key>
-                <description>Channel Sync Button</description>
-                <status>0x96</status>
-                <midino>0x5B</midino>
+                <key>pregain</key>
+                <description>Channel Gain</description>
+                <status>0xB6</status>
+                <midino>0x06</midino>
                 <options>
-                    <normal />
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter3</key>
+                <description>Channel EQ High</description>
+                <status>0xB6</status>
+                <midino>0x07</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter3</key>
+                <description>Channel EQ High</description>
+                <status>0xB6</status>
+                <midino>0x08</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel3]_Effect1]</group>
+                <key>parameter3</key>
+                <description>Channel EQ High</description>
+                <status>0xB6</status>
+                <midino>0x09</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel4]_Effect1]</group>
+                <key>parameter3</key>
+                <description>Channel EQ High</description>
+                <status>0xB6</status>
+                <midino>0x0A</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.playButton.input</key>
+                <description>Left Deck A play button.</description>
+                <status>0x90</status>
+                <midino>0x0B</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.playButton.input</key>
+                <description>Right Deck B play button.</description>
+                <status>0x91</status>
+                <midino>0x0B</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.playButton.input</key>
+                <description>Left Deck C play button.</description>
+                <status>0x92</status>
+                <midino>0x0B</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.playButton.input</key>
+                <description>Right Deck D play button.</description>
+                <status>0x93</status>
+                <midino>0x0B</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter2</key>
+                <description>Channel EQ Mid</description>
+                <status>0xB6</status>
+                <midino>0x0B</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.cueButton.input</key>
+                <description>Cue Button</description>
+                <status>0x90</status>
+                <midino>0x0C</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.cueButton.input</key>
+                <description>Cue Button</description>
+                <status>0x91</status>
+                <midino>0x0C</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.cueButton.input</key>
+                <description>Cue Button</description>
+                <status>0x92</status>
+                <midino>0x0C</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.cueButton.input</key>
+                <description>Cue Button</description>
+                <status>0x93</status>
+                <midino>0x0C</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter2</key>
+                <description>Channel EQ Mid</description>
+                <status>0xB6</status>
+                <midino>0x0C</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel3]_Effect1]</group>
+                <key>parameter2</key>
+                <description>Channel EQ Mid</description>
+                <status>0xB6</status>
+                <midino>0x0D</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel4]_Effect1]</group>
+                <key>parameter2</key>
+                <description>Channel EQ Mid</description>
+                <status>0xB6</status>
+                <midino>0x0E</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter1</key>
+                <description>Channel EQ Low</description>
+                <status>0xB6</status>
+                <midino>0x0F</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>loop_in</key>
+                <description>Loop In (In Adjust) Button</description>
+                <status>0x90</status>
+                <midino>0x10</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>loop_in</key>
+                <description>Loop In (In Adjust) Button</description>
+                <status>0x91</status>
+                <midino>0x10</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>loop_in</key>
+                <description>Loop In (In Adjust) Button</description>
+                <status>0x92</status>
+                <midino>0x10</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>loop_in</key>
+                <description>Loop In (In Adjust) Button</description>
+                <status>0x93</status>
+                <midino>0x10</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter1</key>
+                <description>Channel EQ Low</description>
+                <status>0xB6</status>
+                <midino>0x10</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>loop_out</key>
+                <description>Loop Out (Out Adjust) Button</description>
+                <status>0x90</status>
+                <midino>0x11</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>loop_out</key>
+                <description>Loop Out (Out Adjust) Button</description>
+                <status>0x91</status>
+                <midino>0x11</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>loop_out</key>
+                <description>Loop Out (Out Adjust) Button</description>
+                <status>0x92</status>
+                <midino>0x11</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>loop_out</key>
+                <description>Loop Out (Out Adjust) Button</description>
+                <status>0x93</status>
+                <midino>0x11</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel3]_Effect1]</group>
+                <key>parameter1</key>
+                <description>Channel EQ Low</description>
+                <status>0xB6</status>
+                <midino>0x11</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>loop_exit</key>
+                <description>Loop Active Button</description>
+                <status>0x90</status>
+                <midino>0x12</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>loop_exit</key>
+                <description>Loop Active Button</description>
+                <status>0x91</status>
+                <midino>0x12</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>loop_exit</key>
+                <description>Loop Active Button</description>
+                <status>0x92</status>
+                <midino>0x12</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>loop_exit</key>
+                <description>Loop Active Button</description>
+                <status>0x93</status>
+                <midino>0x12</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EqualizerRack1_[Channel4]_Effect1]</group>
+                <key>parameter1</key>
+                <description>Channel EQ Low</description>
+                <status>0xB6</status>
+                <midino>0x12</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.autoLoopLength</key>
+                <description>Autoloop knob</description>
+                <status>0xB0</status>
+                <midino>0x13</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.autoLoopLength</key>
+                <description>Autoloop knob</description>
+                <status>0xB1</status>
+                <midino>0x13</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.autoLoopLength</key>
+                <description>Autoloop knob</description>
+                <status>0xB2</status>
+                <midino>0x13</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.autoLoopLength</key>
+                <description>Autoloop knob</description>
+                <status>0xB3</status>
+                <midino>0x13</midino>
+                <options>
+                    <script-binding/>
                 </options>
             </control>
             <control>
@@ -1699,7 +629,47 @@
                 <status>0xB6</status>
                 <midino>0x13</midino>
                 <options>
-                    <normal />
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>beatloop_activate</key>
+                <description>Auto Loop Button (Press Move Grid Dial)</description>
+                <status>0x90</status>
+                <midino>0x14</midino>
+                <options>
+                    <selectknob/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>beatloop_activate</key>
+                <description>Auto Loop Button (Press Move Grid Dial)</description>
+                <status>0x91</status>
+                <midino>0x14</midino>
+                <options>
+                    <selectknob/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>beatloop_activate</key>
+                <description>Auto Loop Button (Press Move Grid Dial)</description>
+                <status>0x92</status>
+                <midino>0x14</midino>
+                <options>
+                    <selectknob/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>beatloop_activate</key>
+                <description>Auto Loop Button (Press Move Grid Dial)</description>
+                <status>0x93</status>
+                <midino>0x14</midino>
+                <options>
+                    <selectknob/>
                 </options>
             </control>
             <control>
@@ -1709,7 +679,7 @@
                 <status>0xB6</status>
                 <midino>0x15</midino>
                 <options>
-                    <normal />
+                    <normal/>
                 </options>
             </control>
             <control>
@@ -1719,7 +689,47 @@
                 <status>0xB6</status>
                 <midino>0x17</midino>
                 <options>
-                    <normal />
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>quantize</key>
+                <description>Tempo Range Button</description>
+                <status>0x90</status>
+                <midino>0x19</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>quantize</key>
+                <description>Tempo Range Button</description>
+                <status>0x91</status>
+                <midino>0x19</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>quantize</key>
+                <description>Tempo Range Button</description>
+                <status>0x92</status>
+                <midino>0x19</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>quantize</key>
+                <description>Tempo Range Button</description>
+                <status>0x93</status>
+                <midino>0x19</midino>
+                <options>
+                    <normal/>
                 </options>
             </control>
             <control>
@@ -1729,9 +739,1120 @@
                 <status>0xB6</status>
                 <midino>0x19</midino>
                 <options>
-                    <normal />
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>keylock</key>
+                <description>Key Lock Button</description>
+                <status>0x90</status>
+                <midino>0x1A</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>keylock</key>
+                <description>Key Lock Button</description>
+                <status>0x91</status>
+                <midino>0x1A</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>keylock</key>
+                <description>Key Lock Button</description>
+                <status>0x92</status>
+                <midino>0x1A</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>keylock</key>
+                <description>Key Lock Button</description>
+                <status>0x93</status>
+                <midino>0x1A</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.pitchWheel.inputWheel</key>
+                <description>Jog fast Deck 1, SHIFT left JOGDIAL (Deck 1 active)</description>
+                <status>0xB0</status>
+                <midino>0x1F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.pitchWheel.inputWheel</key>
+                <description>Jog fast Deck 2, SHIFT right JOGDIAL (Deck 2 active)</description>
+                <status>0xB1</status>
+                <midino>0x1F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.pitchWheel.inputWheel</key>
+                <description>Jog fast Deck 3, SHIFT left JOGDIAL (Deck 3 active)</description>
+                <status>0xB2</status>
+                <midino>0x1F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.pitchWheel.inputWheel</key>
+                <description>Jog fast Deck 4, SHIFT right JOGDIAL (Deck 4 active)</description>
+                <status>0xB3</status>
+                <midino>0x1F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Master]</group>
+                <key>crossfader</key>
+                <description>Crossfader</description>
+                <status>0xB6</status>
+                <midino>0x1F</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.tempo.inputLSB</key>
+                <description>Tempo Slider</description>
+                <status>0xB0</status>
+                <midino>0x20</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.tempo.inputLSB</key>
+                <description>Tempo Slider</description>
+                <status>0xB1</status>
+                <midino>0x20</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.tempo.inputLSB</key>
+                <description>Tempo Slider</description>
+                <status>0xB2</status>
+                <midino>0x20</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.tempo.inputLSB</key>
+                <description>Tempo Slider</description>
+                <status>0xB3</status>
+                <midino>0x20</midino>
+                <options>
+                    <fourteen-bit-lsb/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.pitchWheel.inputWheel</key>
+                <description>Jog ring Deck 1, left JOGDIALSIDE (Deck 1 active)</description>
+                <status>0xB0</status>
+                <midino>0x21</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.pitchWheel.inputWheel</key>
+                <description>Jog ring Deck 2, right JOGDIALSIDE (Deck 2 active)</description>
+                <status>0xB1</status>
+                <midino>0x21</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.pitchWheel.inputWheel</key>
+                <description>Jog ring Deck 3, left JOGDIALSIDE (Deck 3 active)</description>
+                <status>0xB2</status>
+                <midino>0x21</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.pitchWheel.inputWheel</key>
+                <description>Jog ring Deck 4, right JOGDIALSIDE (Deck 4 active)</description>
+                <status>0xB3</status>
+                <midino>0x21</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.pitchWheel.inputWheel</key>
+                <description>Jog (Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
+                <status>0xB0</status>
+                <midino>0x22</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.pitchWheel.inputWheel</key>
+                <description>Jog (Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
+                <status>0xB1</status>
+                <midino>0x22</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.pitchWheel.inputWheel</key>
+                <description>Jog (Vinyl Mode) Deck 3, left JOGDIAL (Deck 3 active)</description>
+                <status>0xB2</status>
+                <midino>0x22</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.pitchWheel.inputWheel</key>
+                <description>Jog (Vinyl Mode) Deck 4, right JOGDIAL (Deck 4 active)</description>
+                <status>0xB3</status>
+                <midino>0x22</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.pitchWheel.inputWheel</key>
+                <description>Jog (no Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
+                <status>0xB0</status>
+                <midino>0x23</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.pitchWheel.inputWheel</key>
+                <description>Jog (no Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
+                <status>0xB1</status>
+                <midino>0x23</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.pitchWheel.inputWheel</key>
+                <description>Jog (no Vinyl Mode) Deck 3, left JOGDIAL (Deck 3 active)</description>
+                <status>0xB2</status>
+                <midino>0x23</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.pitchWheel.inputWheel</key>
+                <description>Jog (no Vinyl Mode) Deck 4, right JOGDIAL (Deck 4 active)</description>
+                <status>0xB3</status>
+                <midino>0x23</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.pitchWheel.inputWheel</key>
+                <description>Jog ring shift Deck 1, SHIFT left JOGDIALSIDE (Deck 1 active)</description>
+                <status>0xB0</status>
+                <midino>0x26</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.pitchWheel.inputWheel</key>
+                <description>Jog ring shift Deck 2, SHIFT right JOGDIALSIDE (Deck 2 active)</description>
+                <status>0xB1</status>
+                <midino>0x26</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.pitchWheel.inputWheel</key>
+                <description>Jog ring shift Deck 3, SHIFT left JOGDIALSIDE (Deck 3 active)</description>
+                <status>0xB2</status>
+                <midino>0x26</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.pitchWheel.inputWheel</key>
+                <description>Jog ring shift Deck 4, SHIFT right JOGDIALSIDE (Deck 4 active)</description>
+                <status>0xB3</status>
+                <midino>0x26</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.hotcues[1].input</key>
+                <description>Hot Cue 1</description>
+                <status>0x90</status>
+                <midino>0x2E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.hotcues[1].input</key>
+                <description>Hot Cue 1</description>
+                <status>0x91</status>
+                <midino>0x2E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.hotcues[1].input</key>
+                <description>Hot Cue 1</description>
+                <status>0x92</status>
+                <midino>0x2E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.hotcues[1].input</key>
+                <description>Hot Cue 1</description>
+                <status>0x93</status>
+                <midino>0x2E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.hotcues[2].input</key>
+                <description>Hot Cue 2</description>
+                <status>0x90</status>
+                <midino>0x2F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.hotcues[2].input</key>
+                <description>Hot Cue 2</description>
+                <status>0x91</status>
+                <midino>0x2F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.hotcues[2].input</key>
+                <description>Hot Cue 2</description>
+                <status>0x92</status>
+                <midino>0x2F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.hotcues[2].input</key>
+                <description>Hot Cue 2</description>
+                <status>0x93</status>
+                <midino>0x2F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.hotcues[3].input</key>
+                <description>Hot Cue 3</description>
+                <status>0x90</status>
+                <midino>0x30</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.hotcues[3].input</key>
+                <description>Hot Cue 3</description>
+                <status>0x91</status>
+                <midino>0x30</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.hotcues[3].input</key>
+                <description>Hot Cue 3</description>
+                <status>0x92</status>
+                <midino>0x30</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.hotcues[3].input</key>
+                <description>Hot Cue 3</description>
+                <status>0x93</status>
+                <midino>0x30</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.hotcues[4].input</key>
+                <description>Hot Cue 4</description>
+                <status>0x90</status>
+                <midino>0x31</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.hotcues[4].input</key>
+                <description>Hot Cue 4</description>
+                <status>0x91</status>
+                <midino>0x31</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.hotcues[4].input</key>
+                <description>Hot Cue 4</description>
+                <status>0x92</status>
+                <midino>0x31</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.hotcues[4].input</key>
+                <description>Hot Cue 4</description>
+                <status>0x93</status>
+                <midino>0x31</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.scratchWheel.inputTouch</key>
+                <description>Jog touch (No Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
+                <status>0x90</status>
+                <midino>0x35</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.scratchWheel.inputTouch</key>
+                <description>Jog touch (No Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
+                <status>0x91</status>
+                <midino>0x35</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.scratchWheel.inputTouch</key>
+                <description>Jog touch (No Vinyl Mode) Deck 3, left JOGDIAL (Deck 3 active)</description>
+                <status>0x92</status>
+                <midino>0x35</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.scratchWheel.inputTouch</key>
+                <description>Jog touch (No Vinyl Mode) Deck 4, right JOGDIAL (Deck 4 active)</description>
+                <status>0x93</status>
+                <midino>0x35</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.scratchWheel.inputTouch</key>
+                <description>Jog touch (Vinyl Mode) Deck 1, left JOGDIAL (Deck 1 active)</description>
+                <status>0x90</status>
+                <midino>0x36</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.scratchWheel.inputTouch</key>
+                <description>Jog touch (Vinyl Mode) Deck 2, right JOGDIAL (Deck 2 active)</description>
+                <status>0x91</status>
+                <midino>0x36</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.scratchWheel.inputTouch</key>
+                <description>Jog touch (Vinyl Mode) Deck 3, left JOGDIAL (Deck 3 active)</description>
+                <status>0x92</status>
+                <midino>0x36</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.scratchWheel.inputTouch</key>
+                <description>Jog touch (Vinyl Mode) Deck 4, right JOGDIAL (Deck 4 active)</description>
+                <status>0x93</status>
+                <midino>0x36</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Library]</group>
+                <key>MoveVertical</key>
+                <description>Browse Dial (Scan Tracks)</description>
+                <status>0xB6</status>
+                <midino>0x40</midino>
+                <options>
+                    <selectknob/>
+                </options>
+            </control>
+            <control>
+                <group>[Master]</group>
+                <key>maximize_library</key>
+                <description>View Button (Push Browse Dial)</description>
+                <status>0x96</status>
+                <midino>0x41</midino>
+                <options>
+                    <selectknob/>
+                </options>
+            </control>
+            <control>
+                <group>[Library]</group>
+                <key>MoveFocus</key>
+                <description>Tree Button</description>
+                <status>0x96</status>
+                <midino>0x42</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Recording]</group>
+                <key>toggle_recording</key>
+                <description>Favourites / Record Button</description>
+                <status>0x96</status>
+                <midino>0x43</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>LoadSelectedTrack</key>
+                <description>Load Track</description>
+                <status>0x96</status>
+                <midino>0x46</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect1]</group>
+                <key>enabled</key>
+                <description>Toggle Effect Active</description>
+                <status>0x94</status>
+                <midino>0x47</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2_Effect1]</group>
+                <key>enabled</key>
+                <description>Toggle Effect Active</description>
+                <status>0x95</status>
+                <midino>0x47</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>LoadSelectedTrack</key>
+                <description>Load Track</description>
+                <status>0x96</status>
+                <midino>0x47</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.cueButton.input</key>
+                <description>Shift Cue Button</description>
+                <status>0x90</status>
+                <midino>0x48</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.cueButton.input</key>
+                <description>Shift Cue Button</description>
+                <status>0x91</status>
+                <midino>0x48</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.cueButton.input</key>
+                <description>Shift Cue Button</description>
+                <status>0x92</status>
+                <midino>0x48</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.cueButton.input</key>
+                <description>Shift Cue Button</description>
+                <status>0x93</status>
+                <midino>0x48</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect2]</group>
+                <key>enabled</key>
+                <description>Toggle Effect Active</description>
+                <status>0x94</status>
+                <midino>0x48</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2_Effect2]</group>
+                <key>enabled</key>
+                <description>Toggle Effect Active</description>
+                <status>0x95</status>
+                <midino>0x48</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>LoadSelectedTrack</key>
+                <description>Load Track</description>
+                <status>0x96</status>
+                <midino>0x48</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1_Effect3]</group>
+                <key>enabled</key>
+                <description>Toggle Effect Active</description>
+                <status>0x94</status>
+                <midino>0x49</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2_Effect3]</group>
+                <key>enabled</key>
+                <description>Toggle Effect Active</description>
+                <status>0x95</status>
+                <midino>0x49</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>LoadSelectedTrack</key>
+                <description>Load Track</description>
+                <status>0x96</status>
+                <midino>0x49</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>DDJ.deckA.fxAssign1.input</key>
+                <description>Assign FX to bus</description>
+                <status>0x96</status>
+                <midino>0x4C</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>DDJ.deckB.fxAssign1.input</key>
+                <description>Assign FX to bus</description>
+                <status>0x96</status>
+                <midino>0x4D</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>DDJ.deckC.fxAssign1.input</key>
+                <description>Assign FX to bus</description>
+                <status>0x96</status>
+                <midino>0x4E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit1]</group>
+                <key>DDJ.deckD.fxAssign1.input</key>
+                <description>Assign FX to bus</description>
+                <status>0x96</status>
+                <midino>0x4F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2]</group>
+                <key>DDJ.deckA.fxAssign2.input</key>
+                <description>Assign FX to bus</description>
+                <status>0x96</status>
+                <midino>0x50</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2]</group>
+                <key>DDJ.deckB.fxAssign2.input</key>
+                <description>Assign FX to bus</description>
+                <status>0x96</status>
+                <midino>0x51</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2]</group>
+                <key>DDJ.deckC.fxAssign2.input</key>
+                <description>Assign FX to bus</description>
+                <status>0x96</status>
+                <midino>0x52</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[EffectRack1_EffectUnit2]</group>
+                <key>DDJ.deckD.fxAssign2.input</key>
+                <description>Assign FX to bus</description>
+                <status>0x96</status>
+                <midino>0x53</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.pflButton.input</key>
+                <description>Headphones Cue</description>
+                <status>0x96</status>
+                <midino>0x54</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.pflButton.input</key>
+                <description>Headphones Cue</description>
+                <status>0x96</status>
+                <midino>0x55</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.pflButton.input</key>
+                <description>Headphones Cue</description>
+                <status>0x96</status>
+                <midino>0x56</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.pflButton.input</key>
+                <description>Headphones Cue</description>
+                <status>0x96</status>
+                <midino>0x57</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>sync_enabled</key>
+                <description>Channel Sync Button</description>
+                <status>0x96</status>
+                <midino>0x58</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>sync_enabled</key>
+                <description>Channel Sync Button</description>
+                <status>0x96</status>
+                <midino>0x59</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>sync_enabled</key>
+                <description>Channel Sync Button</description>
+                <status>0x96</status>
+                <midino>0x5A</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>sync_enabled</key>
+                <description>Channel Sync Button</description>
+                <status>0x96</status>
+                <midino>0x5B</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.syncMaster.input</key>
+                <description>Sync Master</description>
+                <status>0x96</status>
+                <midino>0x5C</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.syncMaster.input</key>
+                <description>Sync Master</description>
+                <status>0x96</status>
+                <midino>0x5D</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.syncMaster.input</key>
+                <description>Sync Master</description>
+                <status>0x96</status>
+                <midino>0x5E</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.hotcues[5].input</key>
+                <description>Hot Cue 5</description>
+                <status>0x90</status>
+                <midino>0x5F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.hotcues[5].input</key>
+                <description>Hot Cue 5</description>
+                <status>0x91</status>
+                <midino>0x5F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.hotcues[5].input</key>
+                <description>Hot Cue 5</description>
+                <status>0x92</status>
+                <midino>0x5F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.hotcues[5].input</key>
+                <description>Hot Cue 5</description>
+                <status>0x93</status>
+                <midino>0x5F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.syncMaster.input</key>
+                <description>Sync Master</description>
+                <status>0x96</status>
+                <midino>0x5F</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.hotcues[6].input</key>
+                <description>Hot Cue 6</description>
+                <status>0x90</status>
+                <midino>0x60</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.hotcues[6].input</key>
+                <description>Hot Cue 6</description>
+                <status>0x91</status>
+                <midino>0x60</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.hotcues[6].input</key>
+                <description>Hot Cue 6</description>
+                <status>0x92</status>
+                <midino>0x60</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.hotcues[6].input</key>
+                <description>Hot Cue 6</description>
+                <status>0x93</status>
+                <midino>0x60</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.hotcues[7].input</key>
+                <description>Hot Cue 7</description>
+                <status>0x90</status>
+                <midino>0x61</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.hotcues[7].input</key>
+                <description>Hot Cue 7</description>
+                <status>0x91</status>
+                <midino>0x61</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.hotcues[7].input</key>
+                <description>Hot Cue 7</description>
+                <status>0x92</status>
+                <midino>0x61</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.hotcues[7].input</key>
+                <description>Hot Cue 7</description>
+                <status>0x93</status>
+                <midino>0x61</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.hotcues[8].input</key>
+                <description>Hot Cue 8</description>
+                <status>0x90</status>
+                <midino>0x62</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.hotcues[8].input</key>
+                <description>Hot Cue 8</description>
+                <status>0x91</status>
+                <midino>0x62</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.hotcues[8].input</key>
+                <description>Hot Cue 8</description>
+                <status>0x92</status>
+                <midino>0x62</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.hotcues[8].input</key>
+                <description>Hot Cue 8</description>
+                <status>0x93</status>
+                <midino>0x62</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel1]</group>
+                <key>DDJ.deckA.scratchWheel.inputTouch</key>
+                <description>Jog shift touch Deck 4, SHIFT right JOGDIAL (Deck 1 active)</description>
+                <status>0x90</status>
+                <midino>0x67</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel2]</group>
+                <key>DDJ.deckB.scratchWheel.inputTouch</key>
+                <description>Jog shift touch Deck 2, SHIFT right JOGDIAL (Deck 2 active)</description>
+                <status>0x91</status>
+                <midino>0x67</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel3]</group>
+                <key>DDJ.deckC.scratchWheel.inputTouch</key>
+                <description>Jog shift touch Deck 3, SHIFT left JOGDIAL (Deck 3 active)</description>
+                <status>0x92</status>
+                <midino>0x67</midino>
+                <options>
+                    <script-binding/>
+                </options>
+            </control>
+            <control>
+                <group>[Channel4]</group>
+                <key>DDJ.deckD.scratchWheel.inputTouch</key>
+                <description>Jog shift touch Deck 4, SHIFT right JOGDIAL (Deck 4 active)</description>
+                <status>0x93</status>
+                <midino>0x67</midino>
+                <options>
+                    <script-binding/>
                 </options>
             </control>
         </controls>
+        <outputs/>
     </controller>
 </MixxxControllerPreset>
